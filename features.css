@@ -292,6 +292,12 @@ body {
   font-size: 1rem;
   line-height: 1.4;
 }
+/* --- DARK MODE OVERRIDES --- */
+.section-dark .exhibition-dates,
+.section-dark .exhibition-location {
+  color: var(--text-color);
+  opacity: 0.8;
+}
 
 /* 1. Open the modal if either '-open' OR '-submitted' radio is checked */
 input[id$="-open"]:checked ~ .modal-overlay,
