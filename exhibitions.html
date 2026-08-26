@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="features.css" />
-    <title>Document</title>
+    <title>Exhibitions Booking</title>
 </head>
 
 <body>
@@ -22,29 +19,22 @@
         </picture>
 
         <nav class="nav">
-            <!-- Hidden Checkbox Toggle -->
             <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
             <label for="menu-toggle" class="hamburger-btn">
                 <i class="fas fa-bars"></i>
             </label>
 
             <ul class="nav-menu">
-                <li class="menu-item">
-                    <a href="./index.html" class="menu-link">Home</a>
-                </li>
-                <li class="menu-item">
-                    <a href="./exibhitions.html" class="menu-link">Exihibitions</a>
-                </li>
-                <li class="menu-item">
-                    <a href="./about.html" class="menu-link">About</a>
-                </li>
-                <li class="menu-item">
-                    <a href="./contact.html" class="menu-link">Contact</a>
-                </li>
+                <li class="menu-item"><a href="./index.html" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="./exhibitions.html" class="menu-link">Exhibitions</a></li>
+                <li class="menu-item"><a href="./about.html" class="menu-link">About</a></li>
+                <li class="menu-item"><a href="./contact.html" class="menu-link">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
+        <!-- Exhibition 1 -->
         <section class="section section-light exhibition-detail" id="exhibition1">
             <div class="exhibition-detail-content">
                 <figure class="exhibition-detail-img">
@@ -52,16 +42,52 @@
                 </figure>
                 <div class="exhibition-detail-text">
                     <h2>Venice Biennale</h2>
-                    <p class="exhibition-dates">(May 9, 2026-Nov 22, 2026)</p>
+                    <p class="exhibition-dates">(May 9, 2026 - Nov 22, 2026)</p>
                     <p class="exhibition-location">Venice, Italy</p>
-                    <p>A leading international exhibition of contemporary art, bringing together artists from around the
-                        world across pavilions and collateral events throughout the city.</p>
+                    <p>A leading international exhibition of contemporary art, bringing together artists from around the world across pavilions and collateral events throughout the city.</p>
                     <h3>Featured Artists:</h3>
                     <p>Various International Artists</p>
-                    <a href="booking.html" class="book-btn">Book Your Visit</a>
+                    <label for="ex1-open" class="explore-btn">Book Your Visit</label>
+                </div>
+            </div>
+
+            <!-- CSS State Controls for Modal 1 -->
+            <input type="radio" name="modal-ex1" id="ex1-closed" class="modal-state" checked />
+            <input type="radio" name="modal-ex1" id="ex1-open" class="modal-state" />
+            <input type="radio" name="modal-ex1" id="ex1-submitted" class="modal-state" />
+
+            <div class="modal-overlay">
+                <div class="modal-content">
+                    <label for="ex1-closed" class="close-btn">&times;</label>
+
+                    <div class="form-content">
+                        <h2>Book Your Visit</h2>
+                        <div class="form-group">
+                            <label for="name1">Name:</label>
+                            <input type="text" id="name1" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email1">Email:</label>
+                            <input type="email" id="email1" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="date1">Date:</label>
+                            <input type="date" id="date1" required />
+                        </div>
+                        <label for="ex1-submitted" class="explore-btn">Confirm Booking</label>
+                    </div>
+
+                    <div class="success-box">
+                        <div class="success-icon">🎟️</div>
+                        <h3>Booking Confirmed!</h3>
+                        <p>Thank you! Your reservation is placed. <strong>You will receive your ticket by email</strong> shortly.</p>
+                        <label for="ex1-closed" class="explore-btn" style="margin-top:16px;">Done</label>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Exhibition 2 -->
         <section class="section section-dark exhibition-detail" id="exhibition2">
             <div class="exhibition-detail-content">
                 <figure class="exhibition-detail-img">
@@ -69,16 +95,52 @@
                 </figure>
                 <div class="exhibition-detail-text">
                     <h2>Yayoi Kusama</h2>
-                    <p class="exhibition-dates">(Sep 11, 2026-Jan 17, 2027)</p>
+                    <p class="exhibition-dates">(Sep 11, 2026 - Jan 17, 2027)</p>
                     <p class="exhibition-location">Various Locations</p>
-                    <p>A retrospective of the work of Yayoi Kusama, a Japanese contemporary artist known for her
-                        immersive installations and polka dot motifs.</p>
+                    <p>A retrospective of the work of Yayoi Kusama, a Japanese contemporary artist known for her immersive installations and polka dot motifs.</p>
                     <h3>Featured Works:</h3>
                     <p>Infinity Mirror Rooms, Pumpkin Sculptures, Polka Dot Paintings</p>
-                    <a href="booking.html" class="book-btn">Book Your Visit</a>
+                    <label for="ex2-open" class="explore-btn">Book Your Visit</label>
+                </div>
+            </div>
+
+            <!-- CSS State Controls for Modal 2 -->
+            <input type="radio" name="modal-ex2" id="ex2-closed" class="modal-state" checked />
+            <input type="radio" name="modal-ex2" id="ex2-open" class="modal-state" />
+            <input type="radio" name="modal-ex2" id="ex2-submitted" class="modal-state" />
+
+            <div class="modal-overlay">
+                <div class="modal-content">
+                    <label for="ex2-closed" class="close-btn">&times;</label>
+
+                    <div class="form-content">
+                        <h2>Book Your Visit</h2>
+                        <div class="form-group">
+                            <label for="name2">Name:</label>
+                            <input type="text" id="name2" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email2">Email:</label>
+                            <input type="email" id="email2" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="date2">Date:</label>
+                            <input type="date" id="date2" required />
+                        </div>
+                        <label for="ex2-submitted" class="explore-btn">Confirm Booking</label>
+                    </div>
+
+                    <div class="success-box">
+                        <div class="success-icon">🎟️</div>
+                        <h3>Booking Confirmed!</h3>
+                        <p>Thank you! Your reservation is placed. <strong>You will receive your ticket by email</strong> shortly.</p>
+                        <label for="ex2-closed" class="explore-btn" style="margin-top:16px;">Done</label>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Exhibition 3 -->
         <section class="section section-light exhibition-detail" id="exhibition3">
             <div class="exhibition-detail-content">
                 <figure class="exhibition-detail-img">
@@ -86,33 +148,104 @@
                 </figure>
                 <div class="exhibition-detail-text">
                     <h2>Cassirer and the breakthrough</h2>
-                    <p class="exhibition-dates">(May 22, 2026-Sep 27, 2026)</p>
+                    <p class="exhibition-dates">(May 22, 2026 - Sep 27, 2026)</p>
                     <p class="exhibition-location">Various Locations</p>
                     <p>An exploration of the work of Ernst Cassirer, a German philosopher and cultural theorist, focusing on his contributions to the philosophy of symbolic forms.</p>
-                    <h3>Featured Works:</h3>                
+                    <h3>Featured Works:</h3>
                     <p>Philosophical Texts, Artworks, and Cultural Artifacts</p>
-                    <a href="booking.html" class="book-btn">Book Your Visit</a>
+                    <label for="ex3-open" class="explore-btn">Book Your Visit</label>
+                </div>
+            </div>
+
+            <!-- CSS State Controls for Modal 3 -->
+            <input type="radio" name="modal-ex3" id="ex3-closed" class="modal-state" checked />
+            <input type="radio" name="modal-ex3" id="ex3-open" class="modal-state" />
+            <input type="radio" name="modal-ex3" id="ex3-submitted" class="modal-state" />
+
+            <div class="modal-overlay">
+                <div class="modal-content">
+                    <label for="ex3-closed" class="close-btn">&times;</label>
+
+                    <div class="form-content">
+                        <h2>Book Your Visit</h2>
+                        <div class="form-group">
+                            <label for="name3">Name:</label>
+                            <input type="text" id="name3" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email3">Email:</label>
+                            <input type="email" id="email3" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="date3">Date:</label>
+                            <input type="date" id="date3" required />
+                        </div>
+                        <label for="ex3-submitted" class="explore-btn">Confirm Booking</label>
+                    </div>
+
+                    <div class="success-box">
+                        <div class="success-icon">🎟️</div>
+                        <h3>Booking Confirmed!</h3>
+                        <p>Thank you! Your reservation is placed. <strong>You will receive your ticket by email</strong> shortly.</p>
+                        <label for="ex3-closed" class="explore-btn" style="margin-top:16px;">Done</label>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="section section-light exhibition-detail" id="exhibition4">
+
+        <!-- Exhibition 4 -->
+        <section class="section section-dark exhibition-detail" id="exhibition4">
             <div class="exhibition-detail-content">
                 <figure class="exhibition-detail-img">
                     <img src="images/ex4.jpg" alt="Painting the french Riviera" />
                 </figure>
                 <div class="exhibition-detail-text">
                     <h2>Painting the french Riviera</h2>
-                    <p class="exhibition-dates">(Oct 2, 2026-Jan 31, 2027)</p>
+                    <p class="exhibition-dates">(Oct 2, 2026 - Jan 31, 2027)</p>
                     <p class="exhibition-location">Various Locations</p>
                     <p>An exhibition showcasing the works of artists inspired by the French Riviera, highlighting the region's influence on modern art.</p>
                     <h3>Featured Artists:</h3>
                     <p>Pablo Picasso, Henri Matisse, Raoul Dufy, and others</p>
-                    <a href="booking.html" class="book-btn">Book Your Visit</a>
+                    <label for="ex4-open" class="explore-btn">Book Your Visit</label>
                 </div>
-            </div>  
-            
-    </main>
+            </div>
 
+            <!-- CSS State Controls for Modal 4 -->
+            <input type="radio" name="modal-ex4" id="ex4-closed" class="modal-state" checked />
+            <input type="radio" name="modal-ex4" id="ex4-open" class="modal-state" />
+            <input type="radio" name="modal-ex4" id="ex4-submitted" class="modal-state" />
+
+            <div class="modal-overlay">
+                <div class="modal-content">
+                    <label for="ex4-closed" class="close-btn">&times;</label>
+
+                    <div class="form-content">
+                        <h2>Book Your Visit</h2>
+                        <div class="form-group">
+                            <label for="name4">Name:</label>
+                            <input type="text" id="name4" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email4">Email:</label>
+                            <input type="email" id="email4" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="date4">Date:</label>
+                            <input type="date" id="date4" required />
+                        </div>
+                        <label for="ex4-submitted" class="explore-btn">Confirm Booking</label>
+                    </div>
+
+                    <div class="success-box">
+                        <div class="success-icon">🎟️</div>
+                        <h3>Booking Confirmed!</h3>
+                        <p>Thank you! Your reservation is placed. <strong>You will receive your ticket by email</strong> shortly.</p>
+                        <label for="ex4-closed" class="explore-btn" style="margin-top:16px;">Done</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
