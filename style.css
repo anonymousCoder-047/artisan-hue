@@ -246,11 +246,6 @@ body {
   gap: 20px;
 }
 
-.exhibition-cards {
-  width: 200px;
-  min-width: 0;
-}
-
 .exhibition-card-item {
   display: block;
   text-decoration: none;
@@ -259,8 +254,17 @@ body {
 }
 
 .exhibition-img-container {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.exhibition-img-container:hover {
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
 }
 
 .exhibition-img-container img {
@@ -268,6 +272,42 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.featured-main-title {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.featured-main-description {
+  font-weight: 200;
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.exhibition-sub-heading {
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.exhibition-sub-heading-dark {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.exhibition-description {
+  margin-top: 10px;
+  font-weight: 200;
+  color: var(--secondary-color);
+}
+
+.exhibition-description-dark {
+  margin-top: 10px;
+  font-weight: 200;
+  color: var(--text-color);
 }
 
 .exhibition-card-item h3 {
@@ -302,9 +342,30 @@ body {
     color 0.2s ease;
 }
 
+.explore-btn-dark {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
 .explore-btn:hover {
   background-color: var(--secondary-color);
   color: var(--text-color);
+}
+
+.explore-btn-dark:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .exhibition-detail-content {
@@ -334,20 +395,61 @@ body {
   margin-bottom: 8px;
 }
 
+.exhibition-dates-dark,
+.exhibition-location-dark {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 2px 0;
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
 .exhibition-dates,
 .exhibition-location {
   color: var(--secondary-color);
   opacity: 0.8;
   margin: 2px 0;
+  font-weight: 300;
+  font-size: 0.75rem;
 }
 
-.exhibition-detail-text h3 {
+.exhibition-featured-title {
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+}
+
+.exhibition-featured-title-dark {
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+
+.exhibition-featured-description {
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+.exhibition-featured-description-dark {
+  font-weight: 200;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.exhibition-detail-text {
   margin-top: 20px;
   margin-bottom: 8px;
 }
 
 .exhibition-detail-text .explore-btn {
-  margin-top: 24px;
+  margin-top: 14px;
+}
+
+.exhibition-detail-text .explore-btn-dark {
+  margin-top: 14px;
 }
 
 .form-group {
@@ -370,7 +472,6 @@ body {
   font-size: 14px;
 }
 
-/* --- PURE CSS MODAL & STATE SWITCHING --- */
 .modal-state {
   display: none;
 }
@@ -430,19 +531,43 @@ body {
   line-height: 1.4;
 }
 
-/* 1. Open the modal if either '-open' OR '-submitted' radio is checked */
 input[id$="-open"]:checked ~ .modal-overlay,
 input[id$="-submitted"]:checked ~ .modal-overlay {
   display: flex;
 }
 
-/* 2. When '-submitted' radio is checked: swap form with confirmation view */
 input[id$="-submitted"]:checked ~ .modal-overlay .form-content {
   display: none;
 }
 
 input[id$="-submitted"]:checked ~ .modal-overlay .success-box {
   display: block;
+}
+
+.about-heading {
+  margin: 8px 0;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.about-heading-dark {
+  margin: 8px 0;
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.about-description {
+  font-weight: 200;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+}
+
+.about-description-dark {
+  font-weight: 200;
+  font-size: 1.25rem;
+  color: var(--text-color);
 }
 
 .editorial-quote {
@@ -506,6 +631,226 @@ input[id$="-submitted"]:checked ~ .modal-overlay .success-box {
   color: var(--secondary-color);
 }
 
+.cta-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.cta-content {
+  flex: 1;
+  padding: 60px;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: var(--text-color);
+}
+
+.cta-content strong {
+  color: var(--primary-color);
+}
+
+.cta-lead-form {
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 16px 20px;
+  border: 1px solid var(--text-color);
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+}
+
+.input-group button {
+  padding: 16px 30px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.input-group button:hover {
+  background-color: var(--primary-color);
+}
+
+.trust-badge {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.cta-visual {
+  flex: 1;
+  display: flex;
+  max-width: 600px;
+}
+
+.cta-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contact-form-col {
+  flex: 1;
+  min-width: 0;
+  padding: 60px;
+}
+
+.contact-form-col h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.contact-form-col p {
+  font-size: 1.05rem;
+  font-weight: 200;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.contact-info-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--background-white);
+}
+
+.detail-item h3 {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 200;
+  color: var(--secondary-color);
+}
+
+.map-wrapper {
+  flex: 1;
+  min-height: 400px;
+}
+
+.map-wrapper iframe {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .hamburger-btn {
     display: flex;
@@ -537,12 +882,10 @@ input[id$="-submitted"]:checked ~ .modal-overlay .success-box {
     padding: 10px 0;
   }
 
-  /* Toggles menu open when using Fix 1 (Targeting parent .nav) */
   .menu-checkbox:checked ~ .nav-menu {
     display: flex;
   }
 
-  /* Stack hero elements on smaller screens */
   .hero-text {
     max-width: 100%;
   }
@@ -554,7 +897,62 @@ input[id$="-submitted"]:checked ~ .modal-overlay .success-box {
   }
 
   .service-item {
-    flex: 0 0 100%; /* Takes up full width on smaller screens */
+    flex: 0 0 100%;
+  }
+
+  .cta-container {
+    flex-direction: column;
+  }
+
+  .cta-visual {
+    width: 100%;
+    min-height: 350px;
+    order: -1;
+  }
+
+  .cta-content {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .input-group {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .input-group input {
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border-right: 1px solid var(--secondary-color);
+  }
+
+  .input-group button {
+    border-radius: 4px;
+    width: 100%;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-form-col {
+    padding: 40px 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-details {
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .map-wrapper {
+    min-height: 350px;
   }
 }
 
