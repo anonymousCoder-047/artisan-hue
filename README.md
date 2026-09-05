@@ -15,8 +15,6 @@
 ---
 
 ## 📸 Screenshots
-
-*(Replace this section with screenshots or a GIF of your project in action)*
 ![Artisan Hue Preview](./assets/demo.gif)
 
 ---
