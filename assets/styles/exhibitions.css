@@ -1,0 +1,80 @@
+.exhibition-detail-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.exhibition-detail-img {
+  flex: 1 1 300px;
+}
+
+.exhibition-detail-img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.exhibition-detail-text {
+  flex: 1 1 300px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.exhibition-detail-text h2 {
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.exhibition-dates-dark,
+.exhibition-location-dark {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin: 2px 0;
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.exhibition-dates,
+.exhibition-location {
+  color: var(--secondary-color);
+  opacity: 0.8;
+  margin: 2px 0;
+  font-weight: 300;
+  font-size: 0.75rem;
+}
+
+.exhibition-featured-title,
+.exhibition-featured-title-dark {
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.exhibition-featured-title {
+  color: var(--secondary-color);
+}
+
+.exhibition-featured-title-dark {
+  color: var(--text-color);
+}
+
+.exhibition-featured-description,
+.exhibition-featured-description-dark {
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.exhibition-featured-description {
+  color: var(--secondary-color);
+}
+
+.exhibition-featured-description-dark {
+  color: var(--text-color);
+}
+
+.exhibition-detail-text .explore-btn,
+.exhibition-detail-text .explore-btn-dark {
+  margin-top: 14px;
+}

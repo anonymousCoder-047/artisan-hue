@@ -1,0 +1,122 @@
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.contact-form-col {
+  flex: 1;
+  min-width: 0;
+  padding: 60px;
+}
+
+.contact-form-col h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.contact-form-col p {
+  font-size: 1.05rem;
+  font-weight: 200;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  color: var(--secondary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--secondary-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.contact-info-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: var(--background-white);
+}
+
+.detail-item h3 {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 200;
+  color: var(--secondary-color);
+}
+
+.map-wrapper {
+  flex: 1;
+  min-height: 400px;
+}
+
+.map-wrapper iframe {
+  display: block;
+}

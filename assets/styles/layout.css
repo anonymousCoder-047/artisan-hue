@@ -1,0 +1,133 @@
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 15%;
+}
+
+.header-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.footer-column {
+  flex: 1 1 calc(33.333% - 2rem);
+  min-width: 250px;
+}
+
+.footer-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.75rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.footer-description {
+  color: var(--secondary-color);
+  line-height: 1.6;
+  font-size: 0.95rem;
+  font-weight: 200;
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu-item {
+  margin-bottom: 0.75rem;
+}
+
+.footer-menu-link {
+  color: var(--secondary-color);
+  font-weight: 200;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-menu-link:hover {
+  color: var(--primary-color);
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.footer-text {
+  border-top: 1px solid var(--text-color);
+  padding-top: 1.5rem;
+  text-align: center;
+  margin: 0;
+  color: var(--text-color);
+  font-size: 0.85rem;
+}
+
+.logo-container {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+.nav {
+  font-size: 1.125rem;
+  font-weight: 200;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.menu-item:hover > a {
+  color: var(--primary-color);
+  padding-bottom: 1.5px;
+  border-bottom: 1.5px solid var(--primary-color);
+}
+
+.menu-item:active > a {
+  color: var(--secondary-color);
+  padding-bottom: 1.5px;
+  border-bottom: 1.5px solid var(--secondary-color);
+}
+
+.menu-checkbox,
+.hamburger-btn {
+  display: none;
+}

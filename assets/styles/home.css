@@ -1,0 +1,266 @@
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: var(--font-hero-title);
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.hero-subtitle {
+  font-size: var(--font-hero-subtitle);
+  font-weight: 200;
+  color: var(--text-color);
+  text-align: justify;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 2% 0;
+}
+
+.hero-button:hover {
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+.hero-image {
+  max-width: 45%;
+  margin-left: 5%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.exhibition-heading {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: var(--font-sub-heading);
+  font-weight: 600;
+  text-align: center;
+  color: var(--secondary-color);
+  letter-spacing: -0.01em;
+}
+
+.exhibitions-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.exhibition-card-item {
+  display: block;
+  text-decoration: none;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.exhibition-img-container {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.exhibition-img-container:hover {
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+
+.exhibition-img-container img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-main-title {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.featured-main-description {
+  font-weight: 200;
+  font-size: 0.75rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.editorial-quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--secondary-color);
+  text-align: center;
+  margin: 5% auto;
+}
+
+.service-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin-top: 0;
+  margin-bottom: 3.5rem;
+  letter-spacing: 0.03em;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.service-item {
+  flex: 0 0 calc(50% - 1rem);
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  border: 0.5px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  border: 0.5px solid var(--primary-color);
+}
+
+.service-heading {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: -0.01em;
+}
+
+.service-description {
+  display: block;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+.cta-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  overflow: hidden;
+}
+
+.cta-content {
+  flex: 1;
+  padding: 60px;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.cta-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  color: var(--text-color);
+}
+
+.cta-content strong {
+  color: var(--primary-color);
+}
+
+.cta-lead-form {
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 16px 20px;
+  border: 1px solid var(--text-color);
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-color);
+}
+
+.input-group button {
+  padding: 16px 30px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.input-group button:hover {
+  background-color: var(--primary-color);
+}
+
+.trust-badge {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.cta-visual {
+  flex: 1;
+  display: flex;
+  max-width: 600px;
+}
+
+.cta-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
