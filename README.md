@@ -15,7 +15,7 @@
 ---
 
 ## 📸 Screenshots
-![Artisan Hue Preview](./assets/demo.gif)
+![Artisan Hue Preview](./assets/preview.gif)
 
 ---
 
